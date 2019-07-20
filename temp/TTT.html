@@ -1,0 +1,75 @@
+<!DOCTYPE HTML>
+    <head>
+        <title>TicTacToe</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <script src = "funct.js"></script>
+    </head>
+
+    <body style="background-color:black">
+        <style>
+            table#t1{
+                background-color:black;
+                border:solid;
+                border-color: rgb(10, 65, 65);
+            }
+            #scoreTab{
+                color:rgb(170, 223, 117);
+            }
+            #head{
+                text-decoration: underline;
+                text-shadow: 3px 2px rgb(16, 102, 81);
+            }
+        </style>
+        <div>
+            <p id="status" style="display:none">game</p>
+            <h2 id = "head" style="color:rgb(143, 238, 89);text-align: center" >The TicTacToe game</h2>
+            
+        </div>
+        <div class="container">
+            <div id="gameboard" class="col-xs-12 col-sm-6 col-lg-4">
+                <table id="t1" >
+                    <tr>
+                        <td><img id="a1" src="empty.jpg" onclick="turn(this.id)"></td>
+                        <td><img id="a2" src="empty.jpg" onclick="turn(this.id)"></td>
+                        <td><img id="a3" src="empty.jpg" onclick="turn(this.id)"></td>
+                    </tr>
+                    <tr>
+                        <td><img id="b1" src="empty.jpg" onclick="turn(this.id)"></td>
+                        <td><img id="b2" src="empty.jpg" onclick="turn(this.id)"></td>
+                        <td><img id="b3" src="empty.jpg" onclick="turn(this.id)"></td>
+                    </tr>
+                    <tr>
+                        <td><img id="c1" src="empty.jpg" onclick="turn(this.id)"></td>
+                        <td><img id="c2" src="empty.jpg" onclick="turn(this.id)"></td>
+                        <td><img id="c3" src="empty.jpg" onclick="turn(this.id)"></td>
+                    </tr>
+                </table>  
+                <div><label>Now turn of player :</label><label id="player">O</label></div>                 
+                <div>
+                    <label id="hidden" style="display:none">0</label>
+                    <button id="new" type="button" class="btn btn-success btn-md" onclick="newGame()"style="display:none">new game</button>
+                    <button id="reset" type="bitton" class="btn btn-success btn-md" onclick="resetScore()" style="display:none">reset</button>
+                </div>
+            </div>
+            
+            <div id="scoreTab" class="col-xs-12 col-sm-6 col-lg-4">
+                <table class="table table-dark" >
+                    <tr>
+                        <th><p>Player</p></td>
+                        <th><p>Score</p></td>
+                    </tr>
+                    <tr>
+                        <td><p>playerO</p></td>
+                        <td><p id="oScore"><b>0</b></p></td>
+                    </tr>
+                    <tr>
+                        <td><p>playerX</p></td>
+                        <td><p id="xScore"><b>0</b></p></td>
+                    </tr>
+                </table>
+            </div> 
+        </div>       
+    </body>
+</HTML>
